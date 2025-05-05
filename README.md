@@ -1,4 +1,5 @@
-🚀 angular-routing-navigation
+# 🚀 __angular-routing-navigation__
+
 A beginner-friendly Angular project demonstrating how to implement routing and navigation using RouterModule, routerLink, router-outlet, and dynamic route parameters.
 
 ✅ Concepts Covered
