@@ -1,27 +1,86 @@
-# RoutingBasics
+🚀 angular-routing-navigation
+A beginner-friendly Angular project demonstrating how to implement routing and navigation using RouterModule, routerLink, router-outlet, and dynamic route parameters.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+✅ Concepts Covered
+Angular AppRoutingModule
 
-## Development server
+Static and dynamic routes
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+routerLink directive for navigation
 
-## Code scaffolding
+<router-outlet> for route rendering
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Accessing route parameters using ActivatedRoute
 
-## Build
+🧠 What You’ll Learn
+Set up page navigation (Home, About, User)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Create dynamic user route like /user/101
 
-## Running unit tests
+Pass and extract route parameters
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+📁 Folder Structure
+arduino
+Copy
+Edit
+src/
+├── app/
+│   ├── home/
+│   ├── about/
+│   ├── user/
+│   ├── app-routing.module.ts
+│   └── app.component.ts / .html
+🔄 Sample Route Links (in app.component.html)
+html
+Copy
+Edit
+<nav>
+  <a routerLink="/">Home</a> |
+  <a routerLink="/about">About</a> |
+  <a [routerLink]="['/user', 101]">User 101</a>
+</nav>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<router-outlet></router-outlet>
+🔧 How to Run
+Clone the repo:
 
-## Further help
+bash
+Copy
+Edit
+git clone https://github.com/your-username/angular-routing-navigation.git
+cd angular-routing-navigation
+Install dependencies:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+bash
+Copy
+Edit
+npm install
+Run the app:
+
+bash
+Copy
+Edit
+ng serve
+Open browser:
+
+arduino
+Copy
+Edit
+http://localhost:4200/
+📸 Demo Pages
+/ → Home
+
+/about → About
+
+/user/101 → Shows "User ID from route: 101"
+
+💡 Extras
+Use ActivatedRoute to fetch route parameters:
+
+ts
+Copy
+Edit
+this.route.params.subscribe(params => {
+  this.userId = params['id'];
+});
